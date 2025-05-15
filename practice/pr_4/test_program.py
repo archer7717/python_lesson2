@@ -1,63 +1,27 @@
+# подключение библеотеки под синонимом gr
 import graphics as gr
 
-window = gr.GraphWin("Jenkslex and Ganzz project", 400, 400)
+# Инициализация окна с названием "Russian game" и размером 100x100 пикселей
+window = gr.GraphWin("Russian game", 300,300)
 
-def draw_left_eye():
-    eye = gr.Circle(gr.Point(150, 180), 20)
-    pupil = gr.Circle(gr.Point(150, 180), 10)
+#Создание круга с радиусом 10 и координатами центра (50, 50)
+my_circle = gr.Circle(gr.Point(50,50), 10)
 
-    eye.setFill('red')
-    pupil.setFill('black')
+# Создание отрезка с концами в точках (2, 4) и (4, 8)
+my_line = gr.Line(gr.Point(10,30), gr.Point(20, 60))
 
-    eye.draw(window)
-    pupil.draw(window)
+# Создание прямоугольника у которого диагональ — отрезок с концами в точках (2, 4) и (4, 8)
+my_rectangle = gr.Rectangle(gr.Point(2, 4), gr.Point(4, 8))
 
-def draw_right_eye():
-    eye = gr.Circle(gr.Point(250, 180), 14)
-    pupil = gr.Circle(gr.Point(250, 180),  7)
-
-    eye.setFill('red')
-    pupil.setFill('black')
-
-    eye.draw(window)
-    pupil.draw(window)
-
-def draw_eyebrows():
-    eyebrow1 = gr.Line(gr.Point(100, 120), gr.Point(180, 170))
-    eyebrow2 = gr.Line(gr.Point(220, 170), gr.Point(300, 120))
-
-    eyebrow1.setWidth(10)
-    eyebrow2.setWidth(10)
-
-    eyebrow1.setOutline('black')
-    eyebrow2.setOutline('black')
-
-    eyebrow1.draw(window)
-    eyebrow2.draw(window)
-
-def draw_face():
-    face = gr.Circle(gr.Point(200, 200), 100)
-    face.setFill('yellow')
-
-    face.draw(window)
-
-def draw_mouth():
-    mouth = gr.Line(gr.Point(150, 260), gr.Point(250, 260))
-    mouth.setWidth(20)
-    mouth.setOutline('black')
-
-    mouth.draw(window)
-
-def draw_angry_lecturer():
-    draw_face()
-    draw_right_eye()
-    draw_right_eye()
-    draw_eyebrows()
-    draw_mouth()
+# Отрисовка примитивов в окне window
+my_circle.draw(window)
+my_line.draw(window)
+my_rectangle.draw(window)
 
 
-draw_angry_lecturer()
 
+#  Ожидание нажатия кнопки мыши по окну.
 window.getMouse()
 
+# Закрытие окна после завершения работы с графикой
 window.close()
