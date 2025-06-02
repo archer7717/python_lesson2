@@ -27,4 +27,4 @@
 #
 # test_invert_array()
 
-for A in range(N-1):
+# for A in range(N-1):
