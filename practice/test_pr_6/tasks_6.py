@@ -21,8 +21,6 @@
 #     #vklad = int(vklad)
 #
 # print(year)
-from uaclient.api.u.pro.packages.summary.v1 import summary
-
 #3
 # N = int(input())
 # A = [0]*N
@@ -132,10 +130,106 @@ from uaclient.api.u.pro.packages.summary.v1 import summary
 #     A.append(y)
 #     b = input()
 # print(A)
+#
+#
+#6
+# def create_input_data() -> list[int]:
+#     """Creates input data."""
+#     arr = []
+#     print("Input the data in the following format:\n"
+#           "- The first line is a number of students;\n"
+#           "- The last line is a line with a symbol #;\n"
+#           "- The lines between the first and last ones in the format:\n"
+#           "    student_id value,\n"
+#           "    0 <= student_id <= N (a number of students),\n"
+#           "    1 <= value <= 10.")
+#     while True:
+#         inp = input()
+#         if inp == '#':
+#             break
+#         elif len(inp.split()) == 1:
+#             arr.append(int(inp))
+#         else:
+#             arr.append([int(inp.split()[0]), int(inp.split()[1])])
+#     return arr
+#
+#
+# def find_sorted_ids(arr: list) -> list:
+#     """Finds sum of mark for every student and sort their ids."""
+#     arr_short = arr[1:]
+#     arr_st = [0] * arr[0]
+#     for el in arr_short:
+#         arr_st[el[0]] += el[1]
+#     indexed_arr = list(enumerate(arr_st))
+#     sorted_indexed_arr = sorted(indexed_arr, key=lambda x: x[1], reverse=True)
+#     sorted_indexes = [tpl[0] for tpl in sorted_indexed_arr]
+#     return sorted_indexes
+#
+#
+# def sort_student_marks(arr: list, sorted_indexes: list) -> list:
+#     """Sorts the students marks."""
+#     sorted_marks = sorted(
+#         arr[1:],
+#         key=lambda x: (sorted_indexes.index(x[0]), -x[1])
+#     )
+#     return sorted_marks
+#
+#
+# def create_string_output(sorted_marks: list) -> str:
+#     """Returns sorted marks in one line."""
+#     string_output = " ".join([str(el[1]) for el in sorted_marks])
+#     return string_output
+#
+#
+# def main() -> None:
+#     input_data = create_input_data()
+#     sorted_indexes = find_sorted_ids(input_data)
+#     sorted_marks = sort_student_marks(input_data, sorted_indexes)
+#     string_output = create_string_output(sorted_marks)
+#     print(string_output)
+#     # return string_output
+#
+#
+# if __name__ == "__main__":
+#     main()
+
+
+def input_chocolate_length() -> int:
+    """Creates input."""
+    inp = int(input("Input the chocolate length (N <= 10000): "))
+    return inp
+
+
+def count_number_of_ways(inp: int) -> int | str:
+    """Counts the number of ways how to divide the chocolate bar."""
+    if inp == 0:  # 3 x 0
+        mes = (
+            "It is impossible to divide the chocolate bar because there is " 
+            "no chocolate."
+        )
+    elif inp % 2 !=0: #3 x 1, 3 x 3, 3 x 5, ...
+        mes = (
+            f"It is impossible to divide the chocolate bar because the amount "
+            f"of chocolate pieces is odd: 3 x {inp}"
+        )
+    elif inp == 2: #3 x 2
+        return  3
+
+    elif inp == 4: # 3 x 4
+        return  11
+    elif inp > 4:
+        arr = [0] * (int(inp / 2))
+        arr[0] = 3
+        arr[1] = 11
+        for idx in range(2, len(arr)):
+            arr[idx] = 4 * arr[idx - 1] - arr[idx - 2]
+        return arr[-1]
 
 
 
+def main():
+    inp = input_chocolate_length()
+    ways = count_number_of_ways(inp)
+    print(ways)
 
-
-
-
+main()
