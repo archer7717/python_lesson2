@@ -193,43 +193,120 @@
 # if __name__ == "__main__":
 #     main()
 
+#
+# def input_chocolate_length() -> int:
+#     """Creates input."""
+#     inp = int(input("Input the chocolate length (N <= 10000): "))
+#     return inp
+#
+#
+# def count_number_of_ways(inp: int) -> int | str:
+#     """Counts the number of ways how to divide the chocolate bar."""
+#     if inp == 0:  # 3 x 0
+#         mes = (
+#             "It is impossible to divide the chocolate bar because there is "
+#             "no chocolate."
+#         )
+#     elif inp % 2 !=0: #3 x 1, 3 x 3, 3 x 5, ...
+#         mes = (
+#             f"It is impossible to divide the chocolate bar because the amount "
+#             f"of chocolate pieces is odd: 3 x {inp}"
+#         )
+#     elif inp == 2: #3 x 2
+#         return  3
+#
+#     elif inp == 4: # 3 x 4
+#         return  11
+#     elif inp > 4:
+#         arr = [0] * (int(inp / 2))
+#         arr[0] = 3
+#         arr[1] = 11
+#         for idx in range(2, len(arr)):
+#             arr[idx] = 4 * arr[idx - 1] - arr[idx - 2]
+#         return arr[-1]
+#
+#
+#
+# def main():
+#     inp = input_chocolate_length()
+#     ways = count_number_of_ways(inp)
+#     print(ways)
+#
+# main()
+#7
+#
+# def create_input_data() -> list:
+#     """Creates input data."""
+#     print("Input a string in the first line and power in the second line: ")
+#     arr = []
+#     while True:
+#         inp = input()
+#         if inp == "":
+#             break
+#         arr.append(inp)
+#     return arr
+#
+#
+# def choose_operation(arr) -> int | str:
+#     """Chooses between count_root and count_power"""
+#     # If power is negative.
+#     if int(arr[1]) < 0:
+#         return count_root(arr)
+#     # If power is positive.
+#     elif int(arr[1]) > 0:
+#         return count_power(arr)
+#     # If power is zero.
+#     else:
+#         return "Use positive or negative power, not zero."
+#
+#
+# def count_root(arr):
+#     """Counts root of the string."""
+#     string = arr[0]
+#     root = - int(arr[1])
+#     token_len = int(len(string) / root)
+#     arr_tokens = []
+#     if len(string) % root !=0:
+#         return  "NO SOLUTION"
+#     else:
+#         for idx in range(0, len(string), token_len):
+#             arr_tokens.append(string[idx:idx + token_len])
+#         orig_token = arr_tokens[0]
+#         for token in arr_tokens:
+#             if token != orig_token:
+#                 return "NO SOLUTION"
+#         return orig_token
+#
+#
+# def count_power(arr):
+#     """Counts string to the power."""
+#     str_to_power = arr[0] * int(arr[1])
+#     return str_to_power
+#
+#
+#
+# def main():
+#     arr = create_input_data()
+#     # print(arr)
+#     res = choose_operation(arr)
+#     print(res)
+#
+#
+# if __name__ == "__main__":
+#     main()
 
-def input_chocolate_length() -> int:
-    """Creates input."""
-    inp = int(input("Input the chocolate length (N <= 10000): "))
-    return inp
-
-
-def count_number_of_ways(inp: int) -> int | str:
-    """Counts the number of ways how to divide the chocolate bar."""
-    if inp == 0:  # 3 x 0
-        mes = (
-            "It is impossible to divide the chocolate bar because there is " 
-            "no chocolate."
-        )
-    elif inp % 2 !=0: #3 x 1, 3 x 3, 3 x 5, ...
-        mes = (
-            f"It is impossible to divide the chocolate bar because the amount "
-            f"of chocolate pieces is odd: 3 x {inp}"
-        )
-    elif inp == 2: #3 x 2
-        return  3
-
-    elif inp == 4: # 3 x 4
-        return  11
-    elif inp > 4:
-        arr = [0] * (int(inp / 2))
-        arr[0] = 3
-        arr[1] = 11
-        for idx in range(2, len(arr)):
-            arr[idx] = 4 * arr[idx - 1] - arr[idx - 2]
-        return arr[-1]
 
 
 
-def main():
-    inp = input_chocolate_length()
-    ways = count_number_of_ways(inp)
-    print(ways)
 
-main()
+
+
+
+
+
+
+
+
+
+
+
