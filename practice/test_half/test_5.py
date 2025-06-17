@@ -1,6 +1,12 @@
 
+#Вернутся попозже
 
-A = [0, 0, 1]
-n = 0
-tn = A[-3:] +A[-2:] + A[-1:]
-print(tn)
+
+
+x = int(input())
+t_seq = [0, 0, 1]
+idx = 2
+while t_seq[-1] <= x:
+    t_seq.append(sum(t_seq[-3:]))
+    idx += 1
+print(idx)
