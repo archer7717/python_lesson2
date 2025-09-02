@@ -15,7 +15,7 @@ def find(number, A ):
 
 
 def generate_permutations(N:int, M:int=-1, prefix=None):
-    '''Генерирует перестановок N чисел в M позициях, 
+    '''Генерирует перестановок N чисел в M позициях,
     с префиксом prefix'''
     M = N if M == -1 else M # по умолчанию N чисел в N позициях
     prefix = prefix or []
