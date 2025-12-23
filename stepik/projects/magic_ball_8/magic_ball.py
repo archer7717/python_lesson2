@@ -10,15 +10,14 @@ def start():
     name = input()
     print(f'Привет {name}')
 
-
-def answers_question():
-    print('Задайте мне вопрос и вы получите ответ')
+def answers_the_question():
+    print('Задайте мне вопрос и получите ответ')
     while True:
-        question = input()
+        a = input()
+        if a == 'нет':
+            break
         print(random.choice(answers))
-
-
-
+        print('Хотите еще задать вопрос?')
 
 start()
-answers_question()
+answers_the_question()
