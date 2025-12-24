@@ -32,16 +32,12 @@ def get_data():
     return chars, lenght, int(count)
 
 
-
-
 def generate_password(chars, lenght, count):
     for i in range(count):
         password = []
         for _ in range(lenght):
             password.append(random.choice(chars))
         print(''.join(password))
-
-
 
 a,b,c = get_data()
 
