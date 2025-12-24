@@ -25,9 +25,13 @@ def get_data():
     if symbols == 'да':
         chars+=punctuation
     ambiguous_characters = input('Add ambiguous characters? il1Lo0O: ')
-    if ambiguous_characters == 'да':
-        chars+="il1Lo0O"
+    if ambiguous_characters != 'да':
+        for i in "il1Lo0O":
+            chars = chars.replace(i,"")
+    print(chars)
     return chars, lenght, int(count)
+
+
 
 
 def generate_password(chars, lenght, count):
