@@ -2,10 +2,10 @@
 
 language = input('Введите русский язык или английский')
 text = input('Введите текст')
-#k = int(input('Введите ключ'))
+k = int(input('Введите ключ'))
 direction = input('зашифровать или дешифровать')
 
-def ceaser_cipher(user,  lang, direction):
+def ceaser_cipher(user,  lang, direction, k):
     res, n, mass = [], '', []
 
     if lang in ['русский', 'russian']:
@@ -21,28 +21,27 @@ def ceaser_cipher(user,  lang, direction):
     b = len(text)
     for i in range(b):
         if text[i].isalpha():
-            for k in range(25):
-                if direction == 'зашифровать':
-                    if text[i] in lowercase_letters:
-                        res = ((lowercase_letters.index(text[i]) + k ) % alphas)
-                        n += lowercase_letters[res]
-                    else:
-                        res = ((upppercase_letters.index(text[i]) + k ) % alphas)
-                        n += upppercase_letters[res]
+            if direction == 'зашифровать':
+                if text[i] in lowercase_letters:
+                    res = ((lowercase_letters.index(text[i]) + k ) % alphas)
+                    n += lowercase_letters[res]
                 else:
-                    if text[i] in lowercase_letters:
-                        res = ((lowercase_letters.index(text[i]) - k ) % alphas)
-                        n += lowercase_letters[res]
-                    else:
-                        res = ((upppercase_letters.index(text[i])  - k ) % alphas)
-                        n += upppercase_letters[res]
-            print(n)
+                    res = ((upppercase_letters.index(text[i]) + k ) % alphas)
+                    n += upppercase_letters[res]
+            else:
+                if text[i] in lowercase_letters:
+                    res = ((lowercase_letters.index(text[i]) - k ) % alphas)
+                    n += lowercase_letters[res]
+                else:
+                    res = ((upppercase_letters.index(text[i])  - k ) % alphas)
+                    n += upppercase_letters[res]
+            #print(n)
         else:
             n+=text[i]
 
-    return n, *mass
+    return n
 
 #Усффлв
 
 
-print(ceaser_cipher(text,language, direction))
+print(ceaser_cipher(text, language, direction, k))
