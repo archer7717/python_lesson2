@@ -234,24 +234,65 @@
 #     if r == 1315:
 #         print(i, r)
 
-for n in range(1, 101):
-    b = bin(n)[2:]
-    b = b + str(b.count("1") %2)
-    b = b + str(b.count("1") %2)
-    r = int(b,2)
-    if r < 86:
-        print(n, r)
+# for n in range(1, 101):
+#     b = bin(n)[2:]
+#     b = b + str(b.count("1") %2)
+#     b = b + str(b.count("1") %2)
+#     r = int(b,2)
+#     if r < 86:
+#         print(n, r)
 
+# k = 0
+# for n in range(100, 1000):
+#     d = str(n)
+#     a = [d[0] + d[1] , d[0] + d[2], d[1] + d[0], d[1] + d[2], d[2] + d[0], d[2] + d[1]]
+#     a = [int(x) for x in a if x[0]!="0"]
+#     r = max(a) - min(a)
+#     if r == 35:
+#         k = k + 1
+#         print(n, r)
+# print(k)
 
+# for n in range(100, 1000):
+#     d = str(n)
+#     a = [int(d[0]+ d[1]), int(d[1] + d[2])]
+#     r = max(a) - min(a)
+#     if r ==26:
+#         print(n, r)
+# summ2 = 0
+# for n in range(1, 1000):
+#     a = [int(d) for d in str(n)]
+#     s1 = sum(d for d in a if d%2==0)
+#     s2 = 0
+#     for i in range(len(a)):
+#         if (i+1)%2 ==0:
+#             s2+=a[i]
+#     r = abs(s2-s1)
+#     if r == 7:
+#         print(n, 7)
 
+# for n in range(1, 10000000):
+#     r = n
+#     if r%3==0:
+#         r = r//3
+#     else:
+#         r = r -1
+#     if r%7 ==0:
+#         r = r//7
+#     else:
+#         r = r - 1
+#     if r%11 == 0:
+#         r = r//11
+#     else:
+#         r = r - 1
+#     if r == 6:
+#         print(r, n)
 
-
-
-
-
-
-
-
-
-
-
+# def f(n):
+#     b = bin(n)[2:]
+#     b = b + bin(n%3)[2:].zfill(2)
+#     r = int(b,2)
+#     b = b + bin(r%5)[2:].zfill(3)
+#     r = int(b,2)
+#     return r
+# print(f(13))
