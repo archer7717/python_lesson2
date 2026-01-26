@@ -14,6 +14,7 @@
 #     r = int(b, 3)
 #     if r < 199:
 #         print(n, r)
+from multiprocessing.util import MAXFD
 
 # def cc(x):
 #     s = ''
@@ -129,3 +130,102 @@
 #     r = int(b, 12)
 #     if r > 1799:
 #         print(r, n)
+
+# a= []
+# for n in range(5,100):
+#     b = bin(n)[2:]
+#     if n%3==0:
+#         b = b + b[-3] + b[-2] + b[-1]
+#     else:
+#         b = b + bin(((n%3)*3))[2:]
+#     r = int(b, 2)
+#     if r >151:
+#         a.append(r)
+#         print(r, n)
+# print(min(a))
+# q = []
+# max = ''
+# a = '0123456789abcdefg'
+# def cc(x):
+#     s = []
+#     while x > 0:
+#         s.append(a[x%12])
+#         x = x//12
+#     return s
+#
+# for n in range(1, 100000):
+#    b = cc(n)[::-1]
+#
+#  #  print(b)
+#    if n%4==0:
+#        b = "2" + "".join(b) + '64'
+#   #     print(b)
+#    else:
+#        for i in b:
+#            if i > max:
+#                max = i
+#
+#        #print(max, n)
+#        b = "".join(b) + max
+#    r = int(b, 12)
+#    if r  > 1799:
+#        q.append(r)
+# print(min(q))
+#
+
+
+q = []
+max = ''
+a = '0123456789abcdefg'
+def cc(x):
+    s = []
+    while x > 0:
+        s.append(a[x%12])
+        x = x//12
+    return s
+
+for n in range(10, 100000):
+   b = cc(n)[::-1]
+
+   if n%4==0:
+       b = "2" + "".join(b) + '64'
+   else:
+       if 'b' in b:
+           b = "".join(b) + 'b'
+       elif 'a' in b:
+           b = "".join(b)  + 'a'
+       else:
+           c  = [int(i) for i in b]
+           c.sort()
+          # print(c)
+           b = "".join(b) + str(c[-1])
+   r = int(b, 12)
+   if r > 1799:
+       q.append(r)
+print(min(q))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
