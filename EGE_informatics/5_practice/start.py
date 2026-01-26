@@ -151,29 +151,96 @@
 #     if r > 16:
 #         print(r, n)
 
-
-
-
-
 # Перевод из лююбой системы счисления в 10ричную
-def cc(x):
-    s = ''
+# def cc(x):
+#     s = ''
+#     d = '0123456789abcdefghijklmnopqrstuvwxyz'
+#     while x > 0:
+#         s = d[x%12] + s
+#         x = x // 12
+#     return s
+
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%3) + s
+#         x = x//3
+#     return s
+#
+# for n in range(1, 100):
+#     b = cc(n)
+#     if n%3 == 0:
+#         b = "1" + b + '02'
+#     else:
+#         b = b + cc((n%3) * 4)
+#     r = int(b, 3)
+#     #print(r, n)
+#     if r < 199:
+#         print(r, n)
 
 
+# def cc(x):
+#     s = ''
+#     d = '0123456789abcdefg'
+#     while x > 0:
+#         s = str(d[x%12]) + s
+#         x = x//12
+#     return s
+#
+# for n in range(12, 300):
+#     b = cc(n)
+#     if n%12==0:
+#         b = b + b[-2] + b[-1]
+#     else:
+#         b = b + cc((n%12) * 9)
+#     r = int(b, 12)
+#     if r > 300:
+#         print(n, r)
 
+#
+# for n in range(1, 128):
+#     b = bin(n)[2:].zfill(8)
+#     b = b.replace('1', '2').replace('0', '1').replace('2', '0')
+#     r = int(b, 2)
+#     r = r + 1
+#     if r  == 153:
+#         print(n, r)
 
+# for n in range(1, 100):
+#     b = bin(n)[2:]
+#     if len(b)%2==0:
+#         b = b[:len(b)//2] + "1" + b[len(b)//2:]
+#     else:
+#         pass
+#     r = int(b, 2)
+#     if r <= 26:
+#         print(n, r)
 
+# for i in range(1000, 10000):
+#     # a = str(i)[0] + str(i)[2]
+#     #
+#     # b = str(i)[1] + str(i)[3]
+#     #print(i, a, b)
+#     d = [int(d) for d in str(i)]
+#   #  print(d)
+#     a = d[0] + d[2]
+#     b = d[1] + d[3]
+#
+#     if a < b:
+#         r = int(str(a) + str(b))
+#     else:
+#         r = int(str(b) + str(a))
+#     #print(i, r)
+#     if r == 1315:
+#         print(i, r)
 
-
-
-
-
-
-
-
-
-
-
+for n in range(1, 101):
+    b = bin(n)[2:]
+    b = b + str(b.count("1") %2)
+    b = b + str(b.count("1") %2)
+    r = int(b,2)
+    if r < 86:
+        print(n, r)
 
 
 
