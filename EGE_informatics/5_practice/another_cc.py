@@ -174,58 +174,221 @@ from multiprocessing.util import MAXFD
 #
 
 
-q = []
-max = ''
-a = '0123456789abcdefg'
+# q = []
+# max = ''
+# a = '0123456789abcdefg'
+# def cc(x):
+#     s = []
+#     while x > 0:
+#         s.append(a[x%12])
+#         x = x//12
+#     return s
+#
+# for n in range(10, 100000):
+#    b = cc(n)[::-1]
+#
+#    if n%4==0:
+#        b = "2" + "".join(b) + '64'
+#    else:
+#        if 'b' in b:
+#            b = "".join(b) + 'b'
+#        elif 'a' in b:
+#            b = "".join(b)  + 'a'
+#        else:
+#            c  = [int(i) for i in b]
+#            c.sort()
+#           # print(c)
+#            b = "".join(b) + str(c[-1])
+#    r = int(b, 12)
+#    if r > 1799:
+#        q.append(r)
+# print(min(q))
+#
+# a = []
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%4) + s
+#         x = x//4
+#     return s
+# for n in range(4, 1000):
+#     b = cc(n)
+#     if n%3 ==0:
+#         b = b[-1] + b[1:-1] + b[1] + '1'
+#     else:
+#         b = b + str(n%3)
+#     r = int(b, 4)
+#     if r <= 340:
+#         a.append(r)
+# print(max(a))
+
+#
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if str(n).count('1')%2==0:
+#         b = b + '0'
+#     else:
+#         b = b + '1'
+#     r = int(b,2)
+#     print(r, n)
+
+
+#
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if b.count('1')%2==0:
+#         b = "11" + b
+#     else:
+#         b = b + '00'
+#     r = int(b, 2)
+#     if r > 116:
+#         print(n, r)
+
+
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if b.count('1')%2==0:
+#         b = b + '0'
+#     else:
+#         b = b + '1'
+#
+#     if b.count('1')%2==0:
+#         b = b + '0'
+#     else:
+#         b = b + '1'
+#     r = int(b,2)
+#     if r > 204:
+#         print(n, r)
+# a = []
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if n%2==0:
+#         b = "1" + b + "1"
+#     else:
+#         b = b + '10'
+#     r = int(b, 2)
+#     if r > 179:
+#         print(n, r)
+#         a.append(n)
+# print(min(a))
+
+# a = []
+# for n in range(5, 1000):
+#     b = bin(n)[2:]
+#  #   print(b)
+#     if n%2!=0:
+#         b = b[:-2]
+#         b = "1" + b + "10"
+#     else:
+#         b = b[2:]
+#         b = "10" + b + "1"
+#     r = int(b, 2)
+#     if n >= 33:
+#         a.append(r)
+# # print(min(a))
+# count=[]
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if len(str(n))%2==0:
+#         b = b[:len(b)//2] + '000' + b[len(b)//2:]
+#     else:
+#         b = "1" + b + '01'
+#     r = int(b, 2)
+#     if r > 100:
+#         count.append(n)
+# print(min(count))
+#FIXME
+# a = []
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if n%4==0:
+#         b = b + b[:-2]
+#     else:
+#         b = b + bin(n%4)[2:]
+#     if b[-1] == "0":
+#         b =b[:-1]
+#     r = int(b,2)
+#     print(r, n)
+#     if r > 213:
+#       a.append(r)
+# print(min(a))
+
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%4) + s
+#         x = x//4
+#     return s
+#
+# for n in range(1, 100):
+#     b = cc(n)
+#     b = b.replace('0', '')
+#     r = int(b, 4)
+#     if n ==48:
+#         print(r)
+# a = []
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%5) + s
+#         x = x//5
+#     return s
+#
+# for n in range(11, 1000):
+#     b = cc(n)
+#     if n%5==0:
+#         b = b + b[:-3]
+#     else:
+#         b = cc((n%5)*5) + b
+#     r = int(b, 5)
+#
+#     if r > 375:
+#         a.append(n)
+# print(min(a))
+#
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%3) + s
+#         x = x//3
+#     return s
+# a = []
+# for n in range(5, 6):
+#     b = cc(n)
+#     print(b)
+#     b = b + cc(b.count('2'))
+#     print(b)
+#     b = b + cc(b.count('1'))
+#     print(b)
+#     if b.count('0') == 0:
+#         b = b + '0'
+#     else:
+#         b = b + cc(b.count('0'))
+#     print(b)
+#     r = int(b, 3)
+#     if r < 1000:
+#         a.append(n)
+# print(min(a))
+
 def cc(x):
-    s = []
+    s = ''
     while x > 0:
-        s.append(a[x%12])
-        x = x//12
+        s = str(x%3) + s
+        x = x//3
     return s
-
-for n in range(10, 100000):
-   b = cc(n)[::-1]
-
-   if n%4==0:
-       b = "2" + "".join(b) + '64'
-   else:
-       if 'b' in b:
-           b = "".join(b) + 'b'
-       elif 'a' in b:
-           b = "".join(b)  + 'a'
-       else:
-           c  = [int(i) for i in b]
-           c.sort()
-          # print(c)
-           b = "".join(b) + str(c[-1])
-   r = int(b, 12)
-   if r > 1799:
-       q.append(r)
-print(min(q))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+summ = 0
+a = []
+for n in range(1, 1000):
+    b = cc(n)
+    b = b + b[-1]
+    for q in cc(n):
+        summ += int(q)
+    if summ%3==0:
+        b = "2" + b + "1"
+    else:
+        b = b + cc((summ%3)*2)
+    summ = 0
+    r = int(b, 3)
+    if r > 1000:
+        a.append(n)
+print(min(a))
