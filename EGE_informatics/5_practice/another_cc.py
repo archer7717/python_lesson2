@@ -370,25 +370,115 @@ from multiprocessing.util import MAXFD
 #         a.append(n)
 # print(min(a))
 
-def cc(x):
-    s = ''
-    while x > 0:
-        s = str(x%3) + s
-        x = x//3
-    return s
-summ = 0
-a = []
-for n in range(1, 1000):
-    b = cc(n)
-    b = b + b[-1]
-    for q in cc(n):
-        summ += int(q)
-    if summ%3==0:
-        b = "2" + b + "1"
-    else:
-        b = b + cc((summ%3)*2)
-    summ = 0
-    r = int(b, 3)
-    if r > 1000:
-        a.append(n)
-print(min(a))
+# def cc(x):
+#     s = ''
+#     while x > 0:
+#         s = str(x%3) + s
+#         x = x//3
+#     return s
+# summ = 0
+# a = []
+# for n in range(1, 1000):
+#     b = cc(n)
+#     b = b + b[-1]
+#     for q in cc(n):
+#         summ += int(q)
+#     if summ%3==0:
+#         b = "2" + b + "1"
+#     else:
+#         b = b + cc((summ%3)*2)
+#     summ = 0
+#     r = int(b, 3)
+#     if r > 1000:
+#         a.append(n)
+# print(min(a))
+
+#
+# def cc(x):
+#     if x == 0:
+#         return '0'
+#     s = ''
+#     while x > 0:
+#         s = str(x % 3) + s
+#         x = x // 3
+#     return s
+#
+#
+# a = []
+#
+# for n in range(1, 10000):
+#     b = cc(n)
+#
+#     # Шаг 2: количество цифр 2
+#     b = b + cc(b.count('2'))
+#
+#     # Шаг 3: количество цифр 1
+#     b = b + cc(b.count('1'))
+#
+#     # Шаг 4: количество цифр 0
+#     b = b + cc(b.count('0'))
+#
+#     r = int(b, 3)
+#     if r < 1000:
+#         a.append(n)
+#
+# print(max(a))
+
+# a = []
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#     if len(b)%2==0:
+#         b = b[:len(b)//2] + '000' + b[len(b)//2:]
+#  #
+# #   else:
+#         b = "1" + b + '01'
+#     r = int(b, 2)
+#     if r > 100:
+#         a.append(n)
+# print(min(a))
+# a = []
+# for n in range(1, 1000):
+#     b = bin(n)[2:]
+#    # print(b, n)
+#     if n%4==0:
+#         b = b + b[-2:]
+#     else:
+#         b = b + bin(n%4)[2:]
+#  #   print(b)
+#     if b[-1] == "0":
+#         b = b[:len(b)-1]
+#     r = int(b, 2)
+#  #   print(n,r )
+#     if r > 213:
+#         a.append(r)
+# print(min(a))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
