@@ -143,18 +143,18 @@
 # else:
 #     print(maxx +1)
 
-c = []
-x = []
-for i in range(int(input())):
-    x.append(input())
-s = ""
-for b in x:
-    for i in 'антон':
-        if i in b:
-            c.append(b.index(i))
-
-
-3 4 5 6 4 0 2 4 6 2 4 9 12 18 9 4 4 0 1 2 1
+# c = []
+# x = []
+# for i in range(int(input())):
+#     x.append(input())
+# s = ""
+# for b in x:
+#     for i in 'антон':
+#         if i in b:
+#             c.append(b.index(i))
+#
+#
+# 3 4 5 6 4 0 2 4 6 2 4 9 12 18 9 4 4 0 1 2 1
 
 
 
