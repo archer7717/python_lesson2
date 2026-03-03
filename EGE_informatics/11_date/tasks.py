@@ -58,15 +58,46 @@ from math import *
 #         print(dop)
 #         break
 
-for dop in range(1, 100):
-    kod = 10 + 999
-    numb = ceil(log2(kod))
-    word = ceil(numb*745/8)
-    if 312*(word+dop) <= 311*2**10:
-        print(312*dop)
+# for dop in range(1, 100):
+#     kod = 10 + 999
+#     numb = ceil(log2(kod))
+#     word = ceil(numb*745/8)
+#     if 312*(word+dop) <= 311*2**10:
+#         print(312*dop)
 
 
 
+# for l in range(1, 1000):
+#     kod = 10 + 52 + 963
+#     char = ceil(log2(kod))
+#     number = char * l
+#     if 2000* number <= 693*2**13:
+#         print(l)
 
 
+# for l in range(1, 1000):
+#     kod = 10 + 26 + 16350
+#     char = ceil(log2(kod))
+#     print(char)
+#     number = ceil(l * char/8) + 25
+#     if 510*number > 96*2**10:
+#         print(l)
+#
 
+
+# for a in range(1, 1000):
+#     char = ceil(log2(a))
+#     numbr = ceil((197 * char)/8)
+#     if numbr*178080 > 25*2**20:
+#         print(a)
+#
+
+# for dop in range(1, 10000):
+#     kod = 11
+#     char = ceil(log2(kod))
+#     numb = ceil((char * 42)/8)
+#     if 320*(dop + numb)<= 10*2**10:
+#         print(dop)
+for i in range( 1 , 10000):
+    if 83*i <= 2**20:
+        print(i)
