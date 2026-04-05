@@ -1,6 +1,3 @@
-def summ():
-    a = 10
-    b = 15
+def summ(a, b):
     return a + b
-print(summ())
-print(a)
+print(summ(int(input("Введите первое число")), int(input("Введите второе число"))))
