@@ -65,26 +65,26 @@
 # print(count)
 #
 
-
-from itertools import product
-
-count = 0
-
-for x in product('0123456789ABCDEF', repeat=5):
-    s = ''.join(x)
-    if s[0] == "0":
-        continue
-    count_2 = 0
-    for i in s:
-        if i in '0123456789':
-            count_2 += 1
-
-    if count_2 == 1:   # изменено
-        print(s)
-        count += 1
-
-print(count)
-
+#
+# from itertools import product
+#
+# count = 0
+#
+# for x in product('0123456789ABCDEF', repeat=5):
+#     s = ''.join(x)
+#     if s[0] == "0":
+#         continue
+#     count_2 = 0
+#     for i in s:
+#         if i in '0123456789':
+#             count_2 += 1
+#
+#     if count_2 == 1:   # изменено
+#         print(s)
+#         count += 1
+#
+# print(count)
+#
 
 # from itertools import product
 #
