@@ -26,9 +26,9 @@ from string import *
 #             print(x, y, a//125)
 
 
-
-for x in printable[:14]:
-    for y in printable[:14]:
-        a = int(f'14{y}5{x}2', 14) + int(f'31{x}2{y}3', 14)
-        if a%9==0:
-            print(x , y, a//9 , x+y)
+#
+# for x in printable[:14]:
+#     for y in printable[:14]:
+#         a = int(f'14{y}5{x}2', 14) + int(f'31{x}2{y}3', 14)
+#         if a%9==0:
+#             print(x , y, a//9 , x+y)
