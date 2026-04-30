@@ -5,3 +5,4 @@ for x in 0,1:
                 f = ((z <= x) and (x <= w)) or ( y == ( z or x ))
                 if f == 0:
                     print(x,y,w,z)
+
